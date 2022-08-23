@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Carros from './components/Carros';
+import Cabecalho from './components/Cabecalho';
+import Parceiros from './components/Parceiros';
 
 function App() {
+
+  var multiplica = (num1, num2) => {
+    return num1 * num2
+  }
+
+  const listaCarros = ['Ford', 'Porsche', 'Rolls Royce', 'Toyota', 'Chevrolet']
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Cabecalho/>
+      <Carros carros = {listaCarros}/>
+      <Parceiros multiplica = {multiplica}/>
+    </>
   );
 }
 
